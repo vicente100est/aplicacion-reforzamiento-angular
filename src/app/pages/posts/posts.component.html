@@ -1,8 +1,8 @@
 <h1>POST</h1>
 
 <ul class="list-group">
-  <li *ngFor="let post of [1,1,1,1,1,1]" class="list-group-item">
-    <h2>TITULO</h2>
-    <p>HOLA MUNDO</p>
-  </li>
+
+  <app-post *ngFor="let mensaje of mensajes | async"
+    [mensaje]="mensaje"
+    (clickPost)="escuchaClick( $event )"></app-post>
 </ul>
